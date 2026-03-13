@@ -17,7 +17,7 @@ class APIClient:
         self.session.headers.update(
             {
                 "Content-Type": "application/json",
-                "User-Agent": "pytest-api-framework"
+                "User-Agent": "pytest-api-framework",
             }
         )
 
@@ -26,12 +26,19 @@ class APIClient:
         logger.info(f"URL: {response.request.method} {response.url}")
         logger.info(f"Status: {response.status_code}")
 
+        # try JSON first
         try:
+
             data = response.json()
-            logger.info("Response:")
+
+            logger.info("Response JSON:")
             logger.info(json.dumps(data, indent=2))
-        except:
+
+        except Exception:
+
             logger.info("No JSON response")
+            logger.info("Response text:")
+            logger.info(response.text[:300])  # limit size
 
     def get(self, endpoint):
 
