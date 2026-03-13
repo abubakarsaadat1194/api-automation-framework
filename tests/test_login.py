@@ -1,7 +1,7 @@
 import pytest
 
 from api.endpoints import LOGIN
-from utils.assertions import assert_status_in, assert_key
+from utils.assertions import assert_status_in, assert_key, safe_json
 from utils.data_loader import load_json
 
 
@@ -23,9 +23,8 @@ def test_authentication(auth_client, case):
     # FakeStore sometimes returns 201 instead of 200
     assert_status_in(response, [expected_status, 201])
 
-    # only parse JSON if success
+    # safe JSON parsing (prevents CI crash on 403)
+    data = safe_json(response)
+
     if response.status_code in [200, 201]:
-
-        data = response.json()
-
         assert_key(data, "token")
