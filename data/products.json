@@ -1,0 +1,16 @@
+[
+  {
+    "title": "product1",
+    "price": 1.1,
+    "description": "demo1",
+    "image": "http://example.com",
+    "category": "electronics"
+  },
+  {
+    "title": "product2",
+    "price": 2.2,
+    "description": "demo2",
+    "image": "http://example.com",
+    "category": "electronics"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "username": "mor_2314",
+    "password": "83r5^_",
+    "expected_status": 200
+  },
+  {
+    "username": "mor_2314",
+    "password": "wrong",
+    "expected_status": 401
+  },
+  {
+    "username": "wrong",
+    "password": "wrong",
+    "expected_status": 401
+  }
+]

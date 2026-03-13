@@ -1,0 +1,42 @@
+[
+  {
+    "email": "user1@gmail.com",
+    "username": "user1",
+    "password": "123456",
+    "name": {
+      "firstname": "John",
+      "lastname": "Smith"
+    },
+    "address": {
+      "city": "Berlin",
+      "street": "Main Street",
+      "number": 10,
+      "zipcode": "12345",
+      "geolocation": {
+        "lat": "52.52",
+        "long": "13.40"
+      }
+    },
+    "phone": "123456789"
+  },
+  {
+    "email": "user2@gmail.com",
+    "username": "user2",
+    "password": "123456",
+    "name": {
+      "firstname": "Max",
+      "lastname": "Mustermann"
+    },
+    "address": {
+      "city": "Munich",
+      "street": "Street 2",
+      "number": 20,
+      "zipcode": "80331",
+      "geolocation": {
+        "lat": "48.13",
+        "long": "11.57"
+      }
+    },
+    "phone": "987654321"
+  }
+]
